@@ -1,4 +1,5 @@
 🏥 Patient Healthcare Data Dashboard
+
 An interactive Tableau dashboard analyzing patient demographics, healthcare encounters, and data quality metrics using synthetic healthcare data. Built to demonstrate data visualization, healthcare analytics, and data quality monitoring skills.
 
 📊 Dashboard Overview
