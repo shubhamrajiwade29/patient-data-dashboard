@@ -61,7 +61,6 @@ Version Control: GitHub
 patient-data-dashboard/
 │
 ├── README.md                          # Project documentation
-├── Patient_data.twbx                  # Tableau packaged workbook
 ├── screenshots/
 │   ├── demographics_view.png          # Dashboard view 1
 │   ├── encounters_over_time.png       # Dashboard view 2
@@ -69,10 +68,12 @@ patient-data-dashboard/
 └── data/
     └── sample_data_description.txt    # Data source documentation
 
-🚀 How to View This Dashboard
-Option 1: View Online (Recommended)
-Visit the live Tableau Public dashboard
-Option 2: Download & Open Locally
+## 🚀 How to View This Dashboard
+   
+### View the Live Interactive Dashboard
+Visit the [Tableau Public dashboard](https://public.tableau.com/authoring/Patientdata_17585962299160/GenderDist#1)
+   
+**Note**: The Tableau workbook file (.twbx) is not included in this repository due to file size limitations. All visualizations are available through the live Tableau Public link above.
 
 Download Patient_data.twbx from this repository
 Open with Tableau Desktop or Tableau Public (2021.1 or later recommended)
