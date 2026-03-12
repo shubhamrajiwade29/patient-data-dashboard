@@ -1,105 +1,91 @@
-🏥 Patient Healthcare Data Dashboard
+# 🏥 Patient Healthcare Data Dashboard
 
 An interactive Tableau dashboard analyzing patient demographics, healthcare encounters, and data quality metrics using synthetic healthcare data. Built to demonstrate data visualization, healthcare analytics, and data quality monitoring skills.
 
-📊 Dashboard Overview
+## 📊 Dashboard Overview
 This dashboard provides comprehensive insights into patient populations and healthcare utilization patterns through four analytical views:
-1. Demographics Analysis (Gender Dist, Race, Age Dist)
 
-Gender Distribution: 5,125 female patients vs 4,875 male patients (51.2% vs 48.8%)
-Race Distribution: Majority White patients (3,340), followed by Black/African American (730), Other (710), Asian (287), and American Indian/Alaska Native (58)
-Age Distribution: Birth year analysis showing patient concentration from 1930s-1960s, with peak volumes in mid-20th century
+### 1. Demographics Analysis (Gender Dist, Race, Age Dist)
+- **Gender Distribution:** 5,125 female patients vs 4,875 male patients (51.2% vs 48.8%)
+- **Race Distribution:** Majority White patients (3,340), followed by Black/African American (730), Other (710), Asian (287), and American Indian/Alaska Native (58)
+- **Age Distribution:** Birth year analysis showing patient concentration from 1930s-1960s, with peak volumes in mid-20th century
 
-2. Healthcare Encounters Over Time
+### 2. Healthcare Encounters Over Time
+- **Trend Analysis:** Exponential growth in patient encounters from 1914 (~1 encounter) to 2014 (8,774 encounters)
+- **Growth Phases:** Flat baseline (1914-1960s), gradual increase (1970s-1990s), sharp acceleration (2000-2014)
+- **Top Encounter Codes:**
+  - Code 185347001: 275,483 encounters
+  - Code 439740005: 185,048 encounters
+  - Code 162673000: 123,095 encounters
 
-Trend Analysis: Exponential growth in patient encounters from 1914 (~1 encounter) to 2014 (8,774 encounters)
-Growth Phases: Flat baseline (1914-1960s), gradual increase (1970s-1990s), sharp acceleration (2000-2014)
-Top Encounter Codes:
+### 3. Top Encounter Codes
+- Visualizes the 10 most frequent medical procedure/diagnosis codes
+- Helps identify most common patient care needs and resource allocation patterns
 
-Code 185347001: 275,483 encounters
-Code 439740005: 185,048 encounters
-Code 162673000: 123,095 encounters
+### 4. Data Quality Dashboard
+- **Total Violations:** 217 data quality issues identified
+- **Rule Checks:** 5 validation rules monitored
+- **Primary Issue:** AGE_OUT_OF_RANGE violations (217 instances)
+- **Data Completeness:** 0 missing values for gender, race, and start date fields
 
-3. Top Encounter Codes
+## 🎯 Key Insights & Business Value
 
-Visualizes the 10 most frequent medical procedure/diagnosis codes
-Helps identify most common patient care needs and resource allocation patterns
+### Demographics
+- Slight female patient majority may inform gender-specific care programs
+- Racial diversity present but with significant White patient concentration (47% of population)
+- Age distribution suggests need for geriatric care focus (birth years concentrated 1930-1960)
 
-4. Data Quality Dashboard
+### Healthcare Utilization
+- 140x increase in encounters from 1990 (417) to 2014 (8,774) indicates either population growth, improved record-keeping, or increased healthcare access
+- Top encounter code represents 33% of all encounters — potential area for efficiency improvements or specialized care protocols
 
-Total Violations: 217 data quality issues identified
-Rule Checks: 5 validation rules monitored
-Primary Issue: AGE_OUT_OF_RANGE violations (217 instances)
-Data Completeness: 0 missing values for gender, race, and start date fields
+### Data Quality
+- 99.98% data quality rate (217 violations out of ~10,000 patients)
+- Age validation rules caught 217 outliers — demonstrates proactive data governance
+- Zero missing values in critical demographic fields shows strong data collection practices
 
-🎯 Key Insights & Business Value
-Demographics
+## 🛠️ Tools & Technologies
+- **Tableau Public:** Interactive dashboard design and visualization
+- **Data Source:** Synthetic patient data (Synthea format)
+- **Data Preparation:** Excel/CSV manipulation
+- **Version Control:** GitHub
 
-Slight female patient majority may inform gender-specific care programs
-Racial diversity present but with significant White patient concentration (47% of population)
-Age distribution suggests need for geriatric care focus (birth years concentrated 1930-1960)
-
-Healthcare Utilization
-
-140x increase in encounters from 1990 (417) to 2014 (8,774) indicates either population growth, improved record-keeping, or increased healthcare access
-Top encounter code represents 33% of all encounters—potential area for efficiency improvements or specialized care protocols
-
-Data Quality
-
-99.98% data quality rate (217 violations out of ~10,000 patients)
-Age validation rules caught 217 outliers—demonstrates proactive data governance
-Zero missing values in critical demographic fields shows strong data collection practices
-
-🛠️ Tools & Technologies
-
-Tableau Public: Interactive dashboard design and visualization
-Data Source: Synthetic patient data (Synthea format)
-Data Preparation: Excel/CSV manipulation
-Version Control: GitHub
-
-📂 Repository Structure
+## 📂 Repository Structure
+```
 patient-data-dashboard/
 │
 ├── README.md                          # Project documentation
 ├── screenshots/
 │   ├── demographics_view.png          # Dashboard view 1
 │   ├── encounters_over_time.png       # Dashboard view 2
-│   └── data_quality.png               # Dashboard view 3
+│   └── data_quality.png              # Dashboard view 3
 └── data/
     └── sample_data_description.txt    # Data source documentation
+```
 
 ## 🚀 How to View This Dashboard
-   
-### View the Live Interactive Dashboard
-Visit the [Tableau Public dashboard](https://public.tableau.com/app/profile/shubham.rajiwade/viz/Patientdata_17585962299160/atientDemographicsOverview)
-   
-**Note**: The Tableau workbook file (.twbx) is not included in this repository due to file size limitations. All visualizations are available through the live Tableau Public link above.
 
-Download Patient_data.twbx from this repository
-Open with Tableau Desktop or Tableau Public (2021.1 or later recommended)
-Navigate through the sheets panel to explore each view
+Visit the [Tableau Public dashboard](https://public.tableau.com/app/profile/shubham.rajiwade/viz/Patientdata_17585962299160/PatientDemographicsOverview)
 
-🔍 Analytical Approach
+> **Note:** The Tableau workbook file (.twbx) is not included in this repository due to file size limitations. All visualizations are available through the live Tableau Public link above.
 
-Data Exploration: Profiled patient dataset to understand structure, distributions, and data quality issues
-Metric Selection: Identified key healthcare KPIs (patient volume, encounter frequency, demographic breakdowns)
-Visualization Design: Created clear, interpretable charts following healthcare analytics best practices
-Data Quality Focus: Built dedicated monitoring view to flag anomalies and missing data
-Storytelling: Structured dashboard to flow from demographics → utilization → data validation
+## 🔍 Analytical Approach
+- **Data Exploration:** Profiled patient dataset to understand structure, distributions, and data quality issues
+- **Metric Selection:** Identified key healthcare KPIs (patient volume, encounter frequency, demographic breakdowns)
+- **Visualization Design:** Created clear, interpretable charts following healthcare analytics best practices
+- **Data Quality Focus:** Built dedicated monitoring view to flag anomalies and missing data
+- **Storytelling:** Structured dashboard to flow from demographics → utilization → data validation
 
-💡 Potential Applications
+## 💡 Potential Applications
 This dashboard framework could be adapted for:
+- **Hospital Operations:** Monitor admission patterns and resource allocation
+- **Public Health:** Track population health trends and intervention effectiveness
+- **Healthcare Policy:** Analyze demographic disparities in care access
+- **Quality Assurance:** Real-time data quality monitoring for EHR systems
 
-Hospital Operations: Monitor admission patterns and resource allocation
-Public Health: Track population health trends and intervention effectiveness
-Healthcare Policy: Analyze demographic disparities in care access
-Quality Assurance: Real-time data quality monitoring for EHR systems
+## ⚠️ Data Privacy Note
+This project uses synthetic patient data generated by [Synthea](https://synthea.mitre.org/), an open-source patient generator. No real patient information is included. All data is fictional and used for educational/portfolio purposes only.
 
-⚠️ Data Privacy Note
-This project uses synthetic patient data generated by Synthea, an open-source patient generator. No real patient information is included. All data is fictional and used for educational/portfolio purposes only.
-
-📝 License
-This project is open source
-
-⭐ If you found this project helpful or interesting, please consider giving it a star!
+## 📝 License
+This project is licensed under the MIT License.
 
