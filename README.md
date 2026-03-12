@@ -71,7 +71,7 @@ patient-data-dashboard/
 ## 🚀 How to View This Dashboard
    
 ### View the Live Interactive Dashboard
-Visit the [Tableau Public dashboard](https://public.tableau.com/authoring/Patientdata_17585962299160/GenderDist#1)
+Visit the [Tableau Public dashboard](https://public.tableau.com/app/profile/shubham.rajiwade/viz/Patientdata_17585962299160/atientDemographicsOverview)
    
 **Note**: The Tableau workbook file (.twbx) is not included in this repository due to file size limitations. All visualizations are available through the live Tableau Public link above.
 
