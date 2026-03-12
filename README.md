@@ -1,91 +1,123 @@
 # 🏥 Patient Healthcare Data Dashboard
 
-An interactive Tableau dashboard analyzing patient demographics, healthcare encounters, and data quality metrics using synthetic healthcare data. Built to demonstrate data visualization, healthcare analytics, and data quality monitoring skills.
+An interactive multi-dashboard Tableau project analyzing synthetic patient data across demographics, clinical activity, and data quality. Built to simulate real-world healthcare analytics workflows and demonstrate end-to-end BI skills.
 
-## 📊 Dashboard Overview
-This dashboard provides comprehensive insights into patient populations and healthcare utilization patterns through four analytical views:
+---
 
-### 1. Demographics Analysis (Gender Dist, Race, Age Dist)
-- **Gender Distribution:** 5,125 female patients vs 4,875 male patients (51.2% vs 48.8%)
-- **Race Distribution:** Majority White patients (3,340), followed by Black/African American (730), Other (710), Asian (287), and American Indian/Alaska Native (58)
-- **Age Distribution:** Birth year analysis showing patient concentration from 1930s-1960s, with peak volumes in mid-20th century
+## 🎯 Problem Statement
 
-### 2. Healthcare Encounters Over Time
-- **Trend Analysis:** Exponential growth in patient encounters from 1914 (~1 encounter) to 2014 (8,774 encounters)
-- **Growth Phases:** Flat baseline (1914-1960s), gradual increase (1970s-1990s), sharp acceleration (2000-2014)
-- **Top Encounter Codes:**
-  - Code 185347001: 275,483 encounters
-  - Code 439740005: 185,048 encounters
-  - Code 162673000: 123,095 encounters
+Healthcare organizations often struggle to get a unified view of their patient population, clinical utilization patterns, and data integrity — all of which are critical for operational planning and compliance. This project addresses that gap by building three interconnected dashboards that give stakeholders visibility into **who their patients are, how they interact with the system, and whether the underlying data can be trusted.**
 
-### 3. Top Encounter Codes
-- Visualizes the 10 most frequent medical procedure/diagnosis codes
-- Helps identify most common patient care needs and resource allocation patterns
+---
 
-### 4. Data Quality Dashboard
-- **Total Violations:** 217 data quality issues identified
-- **Rule Checks:** 5 validation rules monitored
-- **Primary Issue:** AGE_OUT_OF_RANGE violations (217 instances)
-- **Data Completeness:** 0 missing values for gender, race, and start date fields
+## 📊 Dashboard 1 — Patient Demographics Overview
+🔗 [View Live Dashboard](https://public.tableau.com/app/profile/shubham.rajiwade/viz/PatientDemographicsOverview/PatientDemographicsOverview)
 
-## 🎯 Key Insights & Business Value
+Answers the question: **Who are our patients?**
 
-### Demographics
-- Slight female patient majority may inform gender-specific care programs
-- Racial diversity present but with significant White patient concentration (47% of population)
-- Age distribution suggests need for geriatric care focus (birth years concentrated 1930-1960)
+- **Gender Distribution:** 5,125 female (51.2%) vs 4,875 male (48.8%) patients
+- **Race Distribution:** White (3,340) · Black/African American (730) · Other (710) · Asian (287) · American Indian/Alaska Native (58)
+- **Age Distribution:** Patient concentration in birth years 1930s–1960s, indicating an aging population
 
-### Healthcare Utilization
-- 140x increase in encounters from 1990 (417) to 2014 (8,774) indicates either population growth, improved record-keeping, or increased healthcare access
-- Top encounter code represents 33% of all encounters — potential area for efficiency improvements or specialized care protocols
+**Key Insight:** The skew toward older patients signals a need for geriatric care programs and age-specific resource planning.
 
-### Data Quality
-- 99.98% data quality rate (217 violations out of ~10,000 patients)
-- Age validation rules caught 217 outliers — demonstrates proactive data governance
-- Zero missing values in critical demographic fields shows strong data collection practices
+---
+
+## 📊 Dashboard 2 — Clinical Activity Overview
+🔗 [View Live Dashboard](https://public.tableau.com/app/profile/shubham.rajiwade/viz/ClinicalActivityOverview/ClinicalActivityOverview)
+
+Answers the question: **How are patients using the healthcare system?**
+
+**Encounters Over Time (1914–2014):**
+- Growth from 1 encounter (1914) → 417 (1995) → 3,643 (2006) → 8,774 (2014)
+- Three distinct phases: flat baseline (pre-1960), gradual growth (1970s–1990s), sharp acceleration (2000–2014)
+
+**Top Encounter Codes:**
+| Code | Encounters |
+|---|---|
+| 185347001 | 275,483 |
+| 439740005 | 185,048 |
+| 390906007 | 85,582 |
+| 162673000 | 123,095 |
+| 702927004 | 245,619 |
+| 50849002 | 59,546 |
+
+**Key Insight:** A single encounter code (185347001) accounts for 33% of all encounters — a prime candidate for care protocol optimization and resource allocation review.
+
+---
+
+## 📊 Dashboard 3 — Data Quality Dashboard
+🔗 [View Live Dashboard](https://public.tableau.com/app/profile/shubham.rajiwade/viz/DataQualityDashboard_17732862587270/DataQualityDashboard)
+
+Answers the question: **Can we trust this data?**
+
+**Summary Metrics:**
+- Total Violations: **217**
+- Total Rules Checked: **5**
+- Overall Data Quality Rate: **99.98%**
+
+**Validation Rules Monitored:**
+| Rule | Violations |
+|---|---|
+| AGE_OUT_OF_RANGE | 217 |
+| END_BEFORE_START | 0 |
+| GENDER_MISSING | 0 |
+| MISSING_START_DATE | 0 |
+| RACE_MISSING | 0 |
+
+**Key Insight:** Zero missing values across all critical demographic fields. The only violations were age outliers — demonstrating strong data collection practices with targeted areas for improvement.
+
+---
 
 ## 🛠️ Tools & Technologies
-- **Tableau Public:** Interactive dashboard design and visualization
-- **Data Source:** Synthetic patient data (Synthea format)
-- **Data Preparation:** Excel/CSV manipulation
-- **Version Control:** GitHub
+
+| Tool | Purpose |
+|---|---|
+| Tableau Public | Dashboard design and interactive visualization |
+| Excel / CSV | Data preparation and cleaning |
+| Synthea | Synthetic healthcare data generation |
+| GitHub | Version control and documentation |
+
+---
 
 ## 📂 Repository Structure
 ```
 patient-data-dashboard/
 │
-├── README.md                          # Project documentation
+├── README.md
 ├── screenshots/
-│   ├── demographics_view.png          # Dashboard view 1
-│   ├── encounters_over_time.png       # Dashboard view 2
-│   └── data_quality.png              # Dashboard view 3
-└── data/
-    └── sample_data_description.txt    # Data source documentation
+   ├── demographics_overview.png
+   ├── clinical_activity_overview.png
+   └── data_quality_dashboard.png
+
 ```
 
-## 🚀 How to View This Dashboard
-
-Visit the [Tableau Public dashboard](https://public.tableau.com/app/profile/shubham.rajiwade/viz/Patientdata_17585962299160/PatientDemographicsOverview)
-
-> **Note:** The Tableau workbook file (.twbx) is not included in this repository due to file size limitations. All visualizations are available through the live Tableau Public link above.
+---
 
 ## 🔍 Analytical Approach
-- **Data Exploration:** Profiled patient dataset to understand structure, distributions, and data quality issues
-- **Metric Selection:** Identified key healthcare KPIs (patient volume, encounter frequency, demographic breakdowns)
-- **Visualization Design:** Created clear, interpretable charts following healthcare analytics best practices
-- **Data Quality Focus:** Built dedicated monitoring view to flag anomalies and missing data
-- **Storytelling:** Structured dashboard to flow from demographics → utilization → data validation
+
+- **Data Exploration:** Profiled synthetic EHR dataset to understand structure, distributions, and quality issues
+- **Metric Selection:** Identified key healthcare KPIs — patient volume, encounter frequency, demographic breakdowns
+- **Visualization Design:** Built three focused dashboards following healthcare analytics best practices
+- **Data Quality Focus:** Dedicated monitoring dashboard to flag anomalies across 5 validation rules
+- **Storytelling:** Structured flow from demographics → clinical activity → data validation
+
+---
 
 ## 💡 Potential Applications
-This dashboard framework could be adapted for:
+
 - **Hospital Operations:** Monitor admission patterns and resource allocation
 - **Public Health:** Track population health trends and intervention effectiveness
 - **Healthcare Policy:** Analyze demographic disparities in care access
 - **Quality Assurance:** Real-time data quality monitoring for EHR systems
 
+---
+
 ## ⚠️ Data Privacy Note
+
 This project uses synthetic patient data generated by [Synthea](https://synthea.mitre.org/), an open-source patient generator. No real patient information is included. All data is fictional and used for educational/portfolio purposes only.
+
+---
 
 ## 📝 License
 This project is licensed under the MIT License.
-
