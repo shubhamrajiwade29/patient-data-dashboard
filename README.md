@@ -80,16 +80,28 @@ Answers the question: **Can we trust this data?**
 
 ---
 
+## 📸 Screenshots
+
+### Patient Demographics Overview
+![Demographics](screenshots/Patient%20Demographics%20Overview.png)
+
+### Clinical Activity Overview
+![Clinical Activity](screenshots/Clinical%20Activity%20Overview.png)
+
+### Data Quality Dashboard
+![Data Quality](screenshots/Data%20Quality%20Dashboard.png)
+
+---
+
 ## 📂 Repository Structure
 ```
 patient-data-dashboard/
 │
 ├── README.md
 ├── screenshots/
-   ├── demographics_overview.png
-   ├── clinical_activity_overview.png
-   └── data_quality_dashboard.png
-
+│   ├── Patient Demographics Overview.png
+│   ├── Clinical Activity Overview.png
+│   └── Data Quality Dashboard.png
 ```
 
 ---
